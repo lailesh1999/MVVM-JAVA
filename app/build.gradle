@@ -41,4 +41,5 @@ dependencies {
     implementation libs.gson // or latest
     implementation libs.appcompat
     implementation libs.recyclerview
+    implementation 'com.airbnb.android:lottie:6.1.0'  // For animations
 }
