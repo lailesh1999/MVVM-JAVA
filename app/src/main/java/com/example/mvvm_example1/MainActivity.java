@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         completed.setTextColor(ContextCompat.getColor(this, R.color.white));
 
         // Highlight selected tab
-        selectedTab.setTextColor(ContextCompat.getColor(this, R.color.purple_700));
+        selectedTab.setTextColor(ContextCompat.getColor(this, R.color.teal_700));
     }
 
 }

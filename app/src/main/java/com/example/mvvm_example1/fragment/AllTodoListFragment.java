@@ -3,12 +3,18 @@ package com.example.mvvm_example1.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mvvm_example1.model.TodoItems;
 import com.example.mvvm_example11.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +31,10 @@ public class AllTodoListFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private RecyclerView recyclerView;
+
+    List<TodoItems> todoList = new ArrayList<>();
 
     public AllTodoListFragment() {
         // Required empty public constructor
@@ -61,6 +71,17 @@ public class AllTodoListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_todo_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_all_todo_list,container,false);
+
+        recyclerView = view.findViewById(R.id.allListAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        todoList.add(new TodoItems("Buy groceries", "Today, 5:00 PM", "", 0, R.color.orange));
+        todoList.add(new TodoItems("Call plumber", "", "", 0, R.color.red));
+        todoList.add(new TodoItems("Finish report", "Tomorrow", "Work", 0, R.color.blue));
+        todoList.add(new TodoItems("Read a book", "", "", 1, R.color.green));
+
+
+        return view;
+       // return inflater.inflate(R.layout.fragment_all_todo_list, container, false);
     }
 }
