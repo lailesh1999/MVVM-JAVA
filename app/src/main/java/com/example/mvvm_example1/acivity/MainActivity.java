@@ -1,4 +1,4 @@
-package com.example.mvvm_example1;
+package com.example.mvvm_example1.acivity;
 
 import android.os.Bundle;
 
