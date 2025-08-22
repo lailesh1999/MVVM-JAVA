@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitHelper {
 
-    private static final String BASE_URL = "https://newsapi.org/v2/";
+    private static final String BASE_URL = "http://192.168.1.5:7102/";
         private static Retrofit retrofit = null;
 
         public static Retrofit getClient() {

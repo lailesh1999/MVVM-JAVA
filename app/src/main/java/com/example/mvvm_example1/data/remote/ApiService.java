@@ -1,5 +1,6 @@
 package com.example.mvvm_example1.data.remote;
 
+import com.example.mvvm_example1.model.LoginResponse;
 import com.example.mvvm_example1.model.NewsResponse;
 
 import retrofit2.Call;
@@ -14,6 +15,12 @@ public interface ApiService {
             @Query("from") String fromDate,
             @Query("sortBy") String sortBy,
             @Query("apiKey") String apiKey
+    );
+
+    @GET("api/auth/login")
+    Call<LoginResponse> login(
+            @Query("email") String email,
+            @Query("password") String password
     );
 
 
